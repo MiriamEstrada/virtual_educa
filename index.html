@@ -1,0 +1,347 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Virtual Educa</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nombre, convierte, ancho, x, email, tel, n, conviert, asunto, ancho1, a, b, w, y, z, seg1, seg2, long1, long2, c, asu, name, cel, aancho;
+function Convierte(){
+	nombre=document.getElementById("txtName").value;
+	convierte=nombre.toUpperCase()
+	document.getElementById("txtName").value=convierte;
+	nombre=document.getElementById("txtName").value;
+	ancho=nombre.length;
+	for(x=0;x<=ancho-1;x++){
+		if((nombre.charAt(x)>='A')&&(nombre.charAt(x)<='Z')||(nombre.charAt(x)==" ")){
+		}
+		else{
+			alert("No puedes introducir datos numericos");			break;
+		}
+	}
+}
+
+function CElectronico(){
+	email=document.getElementById("txtEmail").value;
+	ancho1=email.length;
+		if(((email.charAt(0)>='0')&&(email.charAt(0)<='9'))||(email.charAt(0)=='@')){
+			alert("Primer caractér inválido");
+		}
+		else{
+			y=email.indexOf('@');
+			z=email.lastIndexOf('@');
+			if(y!=z){
+				alert("Solo introduce una @");
+			}
+			else{
+				if((y==-1)&&(z==-1)){
+					alert("Introduce una @");
+				}
+				else{
+					a=email.indexOf('.');
+					b=email.lastIndexOf('.');
+					if(a!=b)
+					{
+					}
+					else{
+						if((a==-1)&&(b==-1)){
+							alert("Por favor, introduce un punto");
+						}
+					}
+				}
+			}
+		}
+	
+}
+
+function telefono(){
+	tel=document.getElementById("txtTel").value;
+	aancho=tel.length;
+	for(n=0; n<=aancho-1;n++){
+	if(((tel.charAt(n)>=0)&&(tel.charAt(n)<=9))||((tel.charAt(n)==" ")||(tel.charAt(n)=='-'))){
+	}
+	else{
+		alert("Introduce datos numericos");
+		break;
+	}
+}
+}
+
+function Asunto(){
+	asunto=document.getElementById("txtAsun").value;
+	conviert=asunto.toUpperCase();
+	document.getElementById("txtAsun").value=conviert;
+	
+}
+function Seguridad(){
+	seg1=document.getElementById("txtSeguridad").value;
+	seg2=document.getElementById("txtSeg").value;
+	asunto=document.getElementById("txtAsun").value;
+	tel=document.getElementById("txtTel").value;
+	email=document.getElementById("txtEmail").value;
+	nombre=document.getElementById("txtName").value;
+	long1=seg1.length;
+	long2=seg2.length;
+	c=email.length;
+	asu=asunto.length;
+	name=nombre.length;
+	cel=tel.length;
+	if((long1==0)||(long2==0)||(c==0)||(asu==0)||(name==0)||(cel==0)){
+		alert("Por favor, introduce todos los datos");
+	}
+	else{
+		if(seg1!=seg2){
+			alert("Codigo de seguridad, incorrecto");
+		}
+		else{
+			alert("Mensaje enviado, gracias");
+			document.getElementById("txtName").value="";
+			document.getElementById("txtEmail").value="";
+			document.getElementById("txtTel").value="";
+			document.getElementById("txtAsun").value="";
+			document.getElementById("txtSeg").value="";
+		}
+	}
+}
+
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Virtual Educa</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quiénes Somos?</a></li>
+            <li><a href="#page3">Servicios y Productos</a></li>
+            <li><a href="#page4">Equipo</a></li>
+			<li><a href="#page5">Contáctanos</a></li>
+		</ul>
+        <br>
+        <br>	
+       <center>
+    <img src="img/logo.png" width="20%" height="15%" alt="VIRTUAL EDUCA"></center>	
+    </div>
+	<div data-role="footer">
+		<h4>Miriam Estrada</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quiénes Somos?</h1>
+	</div>
+	<div data-role="content">	
+   <h2><center>VIRTUAL EDUCA</center></h2>
+Virtual Educa S.A de C.V. nace en el año 2008 como resultado del gran interés de su fundador en impulsar los procesos de innovación educativa de México. Conformando un sólido equipo de trabajo que ha logrado constituirse como una de las empresas con más reconocimiento en el ámbito de la educación a distancia.
+                Se fundamenta en una visión global de la persona, como ser bio-psico-social, ofreciendo servicios de formación integral y brindando herramientas cognitivas, actitudinales y socio humanistas que a través de los recursos de las tecnologías de la información y la comunicación dan respuesta a las inquietudes, necesidades y expectativas de aprendizaje del mundo actual, promoviendo un saber significativo, auténtico y con una visión real de su contexto.
+                <br>
+                <br>
+                <center>
+                <img src="img/logo.png" width="15%" height="10%" alt="Virtual Educa">
+                </center>
+    <h3>Misión</h3>
+     <justify>Innovar, producir, y ofrecer elementos didácticos telemáticosque apoyan a los procesos de enseñanzaaprendizaje en sus 3 diferentes modalidades de escolarización a través de recursos propios y alianzas estratégicas.</justify>
+     <center>
+    <img src="img/learning-classroom.jpg" width="15%" height="10%">	</center>
+    <h3>Visión</h3>
+    Para el 2020, Vitual Educa será reconocida como la empresa de mayor influencia en educación a distancia del país, a través de un íntegro compromiso con la calidad, con la mejora educativa y con el compromiso de brindar educación al alcance de todos. 
+</div>
+	<div data-role="footer">
+		<h4>Virtual Educa</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Servicios y Productos</h1>
+	</div>
+	<div data-role="content">	
+		En Virtual Educa estamos comprometidos con la calidad del diseño, desarrollo de servicios y productos integrales para satisfacer las necesidades de actualización, capacitación y formación de empresas para propiciar una sociedad fortalecida por el conocimiento.
+        Creamos modelos flexibles de formación que permiten acceso a la educación en cualquier momento y desde cualquier lugar, mediante servicios y productos multimedia interactivos.
+        También ofrecemos servicios creativos de asistencia y consultoría personalizada basados en tecnología de vanguardia donde a través de un proceso de análisis y detección de sus necesidades particulares, diseñamos, ejecutamos y evaluamos de forma conjunta las acciones a emprender para garantizar en todo momento los mejores resultados.
+        <br>
+        <br>
+        
+<center>
+<img src="img/01.jpg" width="20%" height="15%">
+<img src="img/diseno_grafico1.jpg" width="22.5%" height="15%">
+</center>
+
+<h2><center>Productos</center></h2>
+Ponemos a su servicio nuestra experiencia en las siguientes áreas:
+<br>
+a) Modelos Alternativos de Educación.
+<br>
+b) Tecnología Educativa.
+<br>
+c) Equipamiento e Infraestructura Tecnológica.
+<br>
+d) Formación e Innovación Docente.
+<br>
+e) Gestión de Derechos de Autor y Propiedad Intelectual.
+<br>
+f) Trámites de Gestión Oficial SEP.
+<br>
+g) Planeación Estratégica.
+<br>
+h) Desarrollo de certificaciones de calidad.
+<br>
+i) Desarrollo de software especializado.
+<br>
+j) Materiales de enseñanza personalizados.
+<br>
+k) Producción de Contenidos E-Learning , B-Learning y M-Learning.
+<br>
+l) Producción multimedia.
+<br>
+m) Adaptación y digitalización.
+
+<h3>Software</h3>
+a) SIGAV.
+<br>
+b) CAID.
+<br>
+c) CODIE.
+<br>
+d) Desarrollo de software especializado.
+ 
+
+	</div>
+	<div data-role="footer">
+		<h4>Virtual Educa</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo de Trabajo</h1>
+	</div>
+	<div data-role="content">	
+	Nuestro equipo de trabajo esta conformado por 5 integrantes, que trabajan dia a dia, para la realizacion de cada una de las páginas web y/o programas.
+    <br>
+    <br>
+    <center>
+    <h2>"HERMANITOS 10"</h2>
+    <img src="img/IMG_20140605_092718.jpg" width="25%" height="20%"> 
+    </center>
+    <br>
+    <center>
+    <img src="img/IMG_20140523_130957.jpg" width="20%" height="25%"> 
+    <h4>Miriam Lorena Estrada Ballinas</h4>
+    Edad: 16 años
+    <br>Estudios:
+    <br>Primaria: Escuela "Carmén Sérdan".
+    <br>Secundaria: Escuela "Plan de Ayala".
+    <br>Bachillerato: Centro de Bachillerato Técnologico Industrial y de Servicios No. 184 "Agustín Cotéz Hutzilac".
+    </center>
+    <br>
+    <center>
+      <img src="img/alexis.jpg" width="20%" height="25%">
+    <h4>Nestor Alexis Sanchez Torres</h4>
+     Edad: 16 años
+     <br>Estudios: 
+     <br>Primaria: Escuela "Felipe Franco Pacheco".
+     <br>Secundaria: Escuela "Tecnioca No.6".
+     <br>Bachillerato: Centro de Bachillerato Técnologico Industrial y de Servicios No. 184 "Agustín Cotéz Hutzilac".
+    </center>
+    <br>
+    <center>
+    <img src="img/IMG_17220033256258.jpeg" width="20%" height="25%">
+    <h4>Ana Laura Mejia Sanguino</h4>
+    Edad: 17 años
+     <br>Estudios:
+     <br>Primaria: Escuela "Mariano Matamoros".
+     <br>Secundaria: Escuela "Rodolfo Sanchez Taboada".
+     <br>Bachillerato: Centro de Bachillerato Técnologico Industrial y de Servicios No. 184 "Agustín Cotéz Hutzilac".
+    </center>
+    <br>
+    <center>
+      <img src="img/baizan.jpg" width="20%" height="25%">
+       <h4>Uriel Baizan Vidals</h4>
+       Edad: 16 años
+     <br>Estudios:
+     <br>Primaria: Escuela "Mariano Matamoros".
+     <br>Secundaria: Escuela "Rodolfo Sanchez Taboada".
+     <br>Bachillerato: Centro de Bachillerato Técnologico Industrial y de Servicios No. 184 "Agustín Cotéz Hutzilac".
+    </center>
+    <br>
+    <center>
+      <img src="img/iris.jpg" width="20%" height="15%">
+       <h4>Iris Judith Ruiz Ramirez</h4>
+    Edad: 17 años
+     <br>Estudios:
+     <br>Primaria: Escuela "Lázaro Cardenas".
+     <br>Secundaria: Escuela "Aquiles Serdán".
+     <br>Bachillerato: Centro de Bachillerato Técnologico Industrial y de Servicios No. 184 "Agustín Cotéz Hutzilac".
+    </center>
+        </div>
+	<div data-role="footer">
+		<h4>Virtual Educa</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Virtual Educa</h1>
+	</div>
+	<div data-role="content">	
+		<table width="661" height="294" border="0">
+  <tr>
+    <td width="111">Nombre:</td>
+    <td width="540"><div data-role="fieldcontain">
+      <input type="text" name="txtName" id="txtName" value=""  / onBlur="Convierte()">
+    </div></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtEmail" id="txtEmail" value=""  / onBlur="CElectronico()">
+    </div></td>
+  </tr>
+  <tr>
+    <td>Telefóno:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtTel" id="txtTel" value=""/ onBlur="telefono()">
+    </div></td>
+  </tr>
+  <tr>
+    <td>Asunto:</td>
+    <td><div data-role="fieldcontain">
+      <div data-role="fieldcontain">
+        <textarea cols="40" rows="8" name="txtAsun" id="txtAsun" onBlur="Asunto()"></textarea>
+      </div>
+      
+    </div></td>
+  </tr>
+  <tr>
+    <td>Seguridad:</td>
+    <td><div data-role="fieldcontain">
+      <input type="text" name="txtSeguridad" id="txtSeguridad" disabled="disabled" value="130514031097" />
+    </div></td>
+  </tr>
+  <tr>
+  <td>
+  </td>
+  <td><div data-role="fieldcontain">
+    <input type="text" name="txtSeg" id="txtSeg" value=""  />
+  </div>
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2"><button data-icon="forward" onClick="Seguridad()">Enviar</button></td>
+  </tr>
+</table>
+	
+	</div>
+	<div data-role="footer">
+		<h4>Miriam Estrada</h4>
+	</div>
+</div>
+
+</body>
+</html>
